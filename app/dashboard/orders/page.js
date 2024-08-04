@@ -13,7 +13,7 @@ const SalesOrderPage = () => {
   const fetchSalesOrders = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:9000/sales_orders', {
+      const response = await axios.get('http://localhost:9000/sales-orders', {
         headers: { 'Token': `${token}` }
       });
       setSalesOrders(response.data.data || []);
